@@ -41,7 +41,7 @@ There are a number of ad-hoc parsers contained in various programs, but
 there's at least one parser library as well, which evolved from the code
 used in Linux:
 
--   <http://git.sipsolutions.net/radiotap.git/>
+-   <https://github.com/radiotap/radiotap-library>
 
 Background
 ----------
