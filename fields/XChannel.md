@@ -11,7 +11,8 @@ Structure
 Required Alignment
 : 4
 
-Unit(s) none, MHz, 802.11 channel number, unknown
+Unit(s)
+: none, MHz, 802.11 channel number, unknown
 
 Extended channel information. The `flags` part of the field contains
 various flags:
