@@ -16,7 +16,12 @@ Unit
 
 Properties of transmitted frames.
 
-\[Table not converted\]
+|**mask** |**meaning** |
+|`0x0001` |Transmission failed due to excessive retries |
+|`0x0002` |Transmission used CTS-to-self protection |
+|`0x0004` |Transmission used RTS/CTS handshake |
+|`0x0008` |Transmission shall not expect an ACK frame and not retry when no ACK is received |
+|`0x0010` |Transmission includes a pre-configured sequence number that should not be changed by the driver's TX handlers |
 
 Discussion
 ==========

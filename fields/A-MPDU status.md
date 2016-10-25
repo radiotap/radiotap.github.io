@@ -24,7 +24,14 @@ reference number to identify the subframes belonging to the same A-MPDU.
 
 The following **flags** are defined:
 
-\[Table not converted\]
+
+| **0x0001** | driver reports 0-length subframes |
+| **0x0002** | frame is 0-length subframe (valid only if 0x0001 is set) |
+| **0x0004** | last subframe is known (should be set for all subframes in an A-MPDU) |
+| **0x0008** | this frame is the last subframe |
+| **0x0010** | delimiter CRC error |
+| **0x0020** | delimiter CRC value known: the delimiter CRC value field is valid |
+| **0xffc0** | reserved |
 
 Within an A-MPDU, the subframe index can be determined by the
 application so it is not included, but depending on the driver reporting
