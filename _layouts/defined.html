@@ -1,0 +1,11 @@
+{% include head.html %}
+<p>{{ content }}
+{% for page in site.pages %}
+  {% if page.categories contains 'defined' %}
+    <ul>
+      <li><a href="{{ page.url }}">{{page.title}}</a></li>
+    </ul>
+  {% endif %}
+{% endfor %}
+</p>
+{% include foot.html %}

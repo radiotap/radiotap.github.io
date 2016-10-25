@@ -1,0 +1,13 @@
+{% include head.html %}
+<p>
+These fields are currently under discussion:
+{% for page in site.pages %}
+  {% if page.categories contains 'suggested' %}
+    <ul>
+      <li><a href="{{ page.url }}">{{page.title}}</a></li>
+    </ul>
+  {% endif %}
+{% endfor %}
+{{ content }}
+</p>
+{% include foot.html %}

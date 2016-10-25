@@ -1,0 +1,11 @@
+name: Radiotap
+markdown: kramdown
+baseurl: /
+defaults:
+ -
+  scope:
+     path: "" # everything
+  values:
+    layout: "default"
+#gems:
+#  - jekyll-redirect-from

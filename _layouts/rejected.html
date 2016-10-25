@@ -1,0 +1,11 @@
+{% include head.html %}
+<p>{{ content }}
+{% for page in site.pages %}
+  {% if page.categories contains 'rejected' %}
+    <ul>
+      <li><a href="{{ page.url }}">{{page.title}}</a></li>
+    </ul>
+  {% endif %}
+{% endfor %}
+</p>
+{% include foot.html %}

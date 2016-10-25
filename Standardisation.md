@@ -1,3 +1,6 @@
+---
+title: Standardisation
+---
 The radiotap community broadly agreed on this process for adding new
 fields to radiotap. New fields should be generally useful to everybody
 using radiotap.
@@ -16,4 +19,3 @@ The process:
     (discussion is over, however, another week lets everyone verify that
     the proposal and amendments, as discussed, have become the
     standard); make the necessary wiki/spec changes.
-
