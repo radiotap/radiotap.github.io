@@ -10,10 +10,6 @@ Structure
   - u32 sig_A2
   - u16 sig_A1_known
   - u16 sig_A2_known
-  - u8 sig_B_common_RU[4]
-  - u16 sig_B_common
-  - u16 sig_B_common_known
-  - u32 sig_B_user1
 
 Required Alignment
 : 4
@@ -23,6 +19,12 @@ Unit(s)
 
 The presence of this field indicates that the frame was received or
 transmitted using the HE PHY.
+
+This field contains the HE-SIG-A part that is common to all HE transmissions.
+If the transmission format was HE_MU, the [HE-MU-common](HE-MU-common) field
+should also be present. At the very least, the [HE-MU-user](HE-MU-user)
+field needs to be present once for an HE_MU frame since it indicates the
+user bandwidth.
 
 ## sig_A1
 
@@ -71,51 +73,3 @@ TODO: add the three formats for information
 | **`0x0400`** | CRC                    | CRC                    | CRC                               |
 | **`0x0800`** | Tail                   | Tail                   | Tail                              |
 | **`0xf000`** | (reserved)             | (reserved)             | (reserved)                        |
-
-## sig_B_common_RU
-
-Each of these contains the 8 bit RU assignment index, if indicated as
-present in the sig_B_common_known part.
-
-## sig_B_common
-
-| **`0x0001`** | Center 26-tone RU bit |
-| **`0x07fe`** | CRC/Tail of SIG-B common |
-| **`0xf800`** | reserved |
-
-## sig_B_common_known
-
-| **`0x0001`** | sig_B_common_RU[0] known (presence depends on SIG-A bandwidth) |
-| **`0x0002`** | sig_B_common_RU[1] known (presence depends on SIG-A bandwidth) |
-| **`0x0004`** | sig_B_common_RU[2] known (presence depends on SIG-A bandwidth) |
-| **`0x0008`** | sig_B_common_RU[3] known (presence depends on SIG-A bandwidth) |
-| **`0x0010`** | Center 26-tone RU bit is known (if present at all) |
-| **`0x0020`** | CRC field value is known |
-| **`0x0040`** | Tail field value is known |
-| **`0xFF80`** | (reserved) |
-
-## sig_B_user1
-
-| **`0x001fffff`** | HE-SIG-B user field as in spec |
-| **`0x000007ff`** | STA-ID |
-| **`0x00003800`** | NSTS |
-| **`0x00004000`** | Tx Beamforming |
-| **`0x00078000`** | MCS |
-| **`0x00080000`** | DCM |
-| **`0x00100000`** | Coding |
-| **`0x00e00000`** | (reserved) |
-| **`0x01000000`** | user field position known |
-| **`0x02000000`** | the captured MPDU is for this user |
-| **`0x04000000`** | STA-ID known |
-| **`0x08000000`** | NSTS known |
-| **`0x10000000`** | Tx Beamforming known |
-| **`0x20000000`** | MCS known |
-| **`0x40000000`** | DCM known |
-| **`0x80000000`** | Coding known |
-
-This field contains the first or the captured (or both) user field. If the
-"user field position known" bit is set, then this field contains the first
-User field from the HE-SIG-B User Specific fields, which may not have been
-the user field for which the captured MPDU (that this radiotap header is
-attached to) was received. In this case, the [HE multiuser](HE multiuser)
-field shall be present in the radiotap header as well.
