@@ -60,8 +60,8 @@ radiotap capture.
 | **`0x0020`** | PE Disambiguity known |
 | **`0x0040`** | TXOP known |
 | **`0x0080`** | Doppler value |
-| **`0x0100`** | # of HE-LTF Symbols known |
-| **`0xfe00`** | TXOP value |
+| **`0x7f00`** | TXOP value |
+| **`0x8000`** | (reserved) |
 
 ## data3
 
