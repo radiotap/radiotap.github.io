@@ -6,59 +6,48 @@ Bit Number
 : not assigned yet
 
 Structure
-: u32 sig_B_user
-  u32 sig_B_user_known
+: u16 per_user_1, per_user_2
+  u8 per_user_position, per_user_known
 
 Required Alignment
-: 4
+: 2
 
 Unit(s)
 : none
 
-This field contains data from the SIG-B per-user field. One such field
-shall be used for each user field for which data is known.
+This field contains data from a SIG-B per-user field for those extra
+users for which the data wasn't capture. This field isn't normally
+necessary, if an HE_MU PPDU was captured, then typically only one of
+the many users will be captured; in this case, adding this field one
+or multiple times allows capturing the full contents of the SIG-B.
 
+Note that the MCS/DCM/etc. configuration for the captured data is
+already encoded in the regular [HE](HE) field, and for the SIG-B it's
+part of the [HE-MU](HE-MU) field.
 
-## sig_B_user
+The split into parts 1 and 2 allows packing this more densely due to
+then requiring alignment of only two.
 
-| **`0x001fffff`** | HE-SIG-B user field as in spec |
-| **`0x7fe00000`** | (reserved) |
-| **`0x80000000`** | MU-MIMO allocation (1: MU-MIMO, 0: non-MU-MIMO) |
+## per_user_1
 
-## sig_B_user_known
+| **`0x7fff`** | B0-B14 of the HE-SIG-B user field as in spec |
+| **`0x8000`** | (reserved) |
 
-| **`0x000000ff`** | user field position (starting from 0) |
-| **`0x00000100`** | user field position known |
-| **`0x00000200`** | the captured MPDU is for this user |
-| **`0x00000c00`** | (reserved) |
-| **`0x0000f000`** | bandwidth (see below) |
-| **`0x00010000`** | bandwidth known |
-| **`0x00020000`** | STA-ID known (B0-10) |
-| **`0x00040000`** | NSTS known (B11-13, only for non-MU-MIMO) |
-| **`0x00080000`** | Tx Beamforming known (B14, only for non-MU-MIMO) |
-| **`0x00100000`** | Spatial Configuration known (B11-B14, only for MU-MIMO) |
-| **`0x00200000`** | MCS known (B15-18) |
-| **`0x00400000`** | DCM known (B19) |
-| **`0x00800000`** | Coding known (B20) |
-| **`0xff000000`** | (reserved) |
+## per_user_2
+| **`0x003f`** | B15-B20 of the HE-SIG-B user field as in spec |
+| **`0xffc0`** | (reserved) |
 
-Of course only a single field shall indicate that the captured MPDU was
-recorded for this user, if multiple users were recorded the bits shall be
-varied accordingly.
+## per_user_position
 
-### bandwidth values
+This contains the position of this user field, starting from 0.
 
-| 0 | 2 MHz |
-| 1 | 5 MHz |
-| 2 | 10 MHz |
-| 3 | 20 MHz |
-| 4 | 40 MHz |
-| 5 | 80 MHz |
-| 6 | 160 MHz |
-| 7 | (reserved) |
+## per_user_known
 
-This field isn't present in the spec, it's normally implied by the RU
-allocations, but not all of those are always recorded in the radiotap header
-so this field is necessary. Note that implementations should include this
-field even when the RU allocation etc. are all known, to simplify parsing.
-Without this field, the effective bitrate is otherwise unknown.
+| **`0x01`** | user field position known |
+| **`0x02`** | STA-ID known (B0-10) |
+| **`0x04`** | NSTS known (B11-13, only for non-MU-MIMO) |
+| **`0x08`** | Tx Beamforming known (B14, only for non-MU-MIMO) |
+| **`0x10`** | Spatial Configuration known (B11-B14, only for MU-MIMO) |
+| **`0x20`** | MCS known (B15-18) |
+| **`0x40`** | DCM known (B19) |
+| **`0x80`** | Coding known (B20) |
