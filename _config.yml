@@ -10,4 +10,4 @@ defaults:
 #gems:
 #  - jekyll-redirect-from
 
-theme: jekyll-theme-cayman
+theme: jekyll-theme-slate
