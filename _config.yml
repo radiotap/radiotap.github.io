@@ -9,3 +9,5 @@ defaults:
     layout: "default"
 #gems:
 #  - jekyll-redirect-from
+
+theme: jekyll-theme-slate
