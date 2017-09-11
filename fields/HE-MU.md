@@ -8,7 +8,6 @@ Bit Number
 Structure
 : - u16 flags1
   - u16 flags2
-  - u16 flags3
   - u8 RU[4]
 
 Required Alignment
@@ -17,7 +16,10 @@ Required Alignment
 Unit(s)
 : none
 
-This field contains data related to PPDUs of HE_MU type.
+This field contains data related to PPDUs of HE_MU type that wasn't
+already captured in the regular [HE](HE) field. This is the common
+data (from HE-SIG-A and HE-SIG-B), the per-user data can be captured
+in the [HE-MU-other-user](HE-MU-other-user) field.
 
 ## flags1
 
@@ -32,17 +34,10 @@ This field contains data related to PPDUs of HE_MU type.
 | **`0x0800`** | RU[3] known (presence depends on bandwidth) |
 | **`0x1000`** | Center 26-tone RU bit known |
 | **`0x2000`** | Center 26-tone RU value |
-| **`0x2000`** | STA-ID known |
-| **`0x4000`** | Spatial Configuration known |
-| **`0x8000`** | SIG-B Compression known |
+| **`0x4000`** | SIG-B Compression known |
+| **`0x8000`** | SIG-B Symbols/MU-MIMO Users known |
 
 ## flags2
-
-| **`0x07ff`** | STA-ID of the user for which the data was captured |
-| **`0x0800`** | SIG-B Symbols/MU-MIMO Users known |
-| **`0xf000`** | Spatial Configuration (MU-MIMO allocation) |
-
-## flags3
 
 | **`0x0007`** | Bandwidth from SIG-A |
 | **`0x0008`** | SIG-B compression from SIG-A |

@@ -1,13 +1,13 @@
 ---
-title: HE-MU-user
+title: HE-MU-other-user
 categories: [suggested]
 ---
 Bit Number
 : not assigned yet
 
 Structure
-: u16 per_user_1, per_user_2
-  u8 per_user_position, per_user_known
+  - u16 per_user_1, per_user_2
+  - u8 per_user_position, per_user_known
 
 Required Alignment
 : 2
@@ -16,10 +16,14 @@ Unit(s)
 : none
 
 This field contains data from a SIG-B per-user field for those extra
-users for which the data wasn't capture. This field isn't normally
-necessary, if an HE_MU PPDU was captured, then typically only one of
-the many users will be captured; in this case, adding this field one
-or multiple times allows capturing the full contents of the SIG-B.
+users for which the data may not have been captured. This field isn't
+normally necessary; if an HE_MU PPDU was captured then typically only
+one of the many users will be captured, in which case all data can be
+encoded in the [HE](HE) and [HE-MU](HE-MU) fields.
+
+In case more of the SIG-B could be captured, this field allows having
+data data captured in radiotap. It's allowed but not necessary to have
+this field also for the user whose data was captured.
 
 Note that the MCS/DCM/etc. configuration for the captured data is
 already encoded in the regular [HE](HE) field, and for the SIG-B it's
@@ -34,6 +38,7 @@ then requiring alignment of only two.
 | **`0x8000`** | (reserved) |
 
 ## per_user_2
+
 | **`0x003f`** | B15-B20 of the HE-SIG-B user field as in spec |
 | **`0xffc0`** | (reserved) |
 
