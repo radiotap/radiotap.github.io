@@ -6,7 +6,7 @@ Bit Number
 : not assigned yet
 
 Structure
-  - u16 data1, data2, data3, data4, data5
+  - u16 data1, data2, data3, data4, data5, data6
 
 Required Alignment
 : 2
@@ -57,14 +57,13 @@ radiotap capture.
 
 | **`0x0001`** | BW/RU allocation known |
 | **`0x0002`** | GI known |
-| **`0x0004`** | LTF known |
+| **`0x0004`** | LTF symbols known |
 | **`0x0008`** | Pre-FEC Padding Factor known |
 | **`0x0010`** | TxBF known |
 | **`0x0020`** | PE Disambiguity known |
 | **`0x0040`** | TXOP known |
-| **`0x0080`** | Doppler value |
-| **`0x7f00`** | TXOP value |
-| **`0x8000`** | (reserved) |
+| **`0x0080`** | midamble periodicity known |
+| **`0xff00`** | (reserved) |
 
 ## data3
 
@@ -98,8 +97,17 @@ radiotap capture.
 
 | **`0x000f`** | data Bandwidth/RU allocation (0=20, 1=40, 2=80, 3=160/80+80, 4=26-tone RU, 5=52-tone RU, 6=106-tone RU, 7=242-tone RU, 8=484-tone RU, 9=996-tone RU, 10=2x996-tone RU) |
 | **`0x0030`** | GI (0=0.8us, 1=1.6us, 2=3.2us, 3=reserved) |
-| **`0x00c0`** | LTF (0=1x, 1=2x, 2=4x, 3=reserved) |
-| **`0x0f00`** | NSTS (actual number of space-time streams, 0=unknown, 1=1, etc.) |
+| **`0x00c0`** | (reserved)
+| **`0x0700`** | LTF symbols (0=1x, 1=2x, 2=4x, 3=6x, 4=8x, 5-7=reserved) |
+| **`0x0800`** | (reserved) |
 | **`0x3000`** | Pre-FEC Padding Factor |
 | **`0x4000`** | TxBF |
 | **`0x8000`** | PE Disambiguity |
+
+## data 6
+
+| **`0x000f`** | NSTS (actual number of space-time streams, 0=unknown, 1=1, etc.) |
+| **`0x0010`** | Doppler value |
+| **`0x00e0`** | (reserved) |
+| **`0x7f00`** | TXOP value |
+| **`0x8000`** | midamble periodicity (0=10, 1=20) |
