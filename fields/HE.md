@@ -50,12 +50,12 @@ radiotap capture.
 | **`0x0800`** | Spatial Reuse 2 known (HE_TRIG format), STA-ID known (HE_MU format) |
 | **`0x1000`** | Spatial Reuse 3 known (HE_TRIG format) |
 | **`0x2000`** | Spatial Reuse 4 known (HE_TRIG format) |
-| **`0x4000`** | BW/RU allocation known |
+| **`0x4000`** | data BW/RU allocation known |
 | **`0x8000`** | Doppler known |
 
 ## data2
 
-| **`0x0001`** | BW/RU allocation known |
+| **`0x0001`** | (reserved) |
 | **`0x0002`** | GI known |
 | **`0x0004`** | LTF symbols known |
 | **`0x0008`** | Pre-FEC Padding Factor known |
