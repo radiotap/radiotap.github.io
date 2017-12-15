@@ -3,7 +3,7 @@ title: HE-MU
 categories: [suggested]
 ---
 Bit Number
-: not assigned yet
+: 24 (tentatively assigned, field data may change)
 
 Structure
 : - u16 flags1

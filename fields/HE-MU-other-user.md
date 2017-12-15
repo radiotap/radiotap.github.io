@@ -3,7 +3,7 @@ title: HE-MU-other-user
 categories: [suggested]
 ---
 Bit Number
-: not assigned yet
+: 25 (tentatively assigned, field data may change)
 
 Structure
   - u16 per_user_1, per_user_2

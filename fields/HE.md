@@ -3,7 +3,7 @@ title: HE
 categories: [suggested]
 ---
 Bit Number
-: not assigned yet
+: 23 (tentatively assigned, field data may change)
 
 Structure
   - u16 data1, data2, data3, data4, data5, data6
