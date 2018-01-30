@@ -42,7 +42,7 @@ in the [HE-MU-other-user](HE-MU-other-user) field.
 | **`0x0007`** | Bandwidth from SIG-A |
 | **`0x0008`** | SIG-B compression from SIG-A |
 | **`0x00f0`** | # of HE-SIG-B Symbols - 1 or # of MU-MIMO Users - 1 from SIG-A |
-| **`0x0100`** | SIG-B compression known |
+| **`0x0100`** | (reserved) |
 | **`0x0200`** | # of HE-SIG-B Symbols/MU-MIMO users known |
 | **`0x0c00`** | (reserved) |
 | **`0x7000`** | # of HE-LTF Symbols from SIG-A |

@@ -63,7 +63,9 @@ radiotap capture.
 | **`0x0020`** | PE Disambiguity known |
 | **`0x0040`** | TXOP known |
 | **`0x0080`** | midamble periodicity known |
-| **`0xff00`** | (reserved) |
+| **`0x3f00`** | RU allocation offset |
+| **`0x4000`** | RU allocation offset known |
+| **`0x8000`** | (reserved) |
 
 ## data3
 
