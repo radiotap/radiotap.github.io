@@ -31,7 +31,9 @@ The following **flags** are defined:
 | **0x0008** | this frame is the last subframe |
 | **0x0010** | delimiter CRC error |
 | **0x0020** | delimiter CRC value known: the delimiter CRC value field is valid |
-| **0xffc0** | reserved |
+| **0x0040** | EOF value |
+| **0x0080** | EOF value known |
+| **0xff00** | reserved |
 
 Within an A-MPDU, the subframe index can be determined by the
 application so it is not included, but depending on the driver reporting
