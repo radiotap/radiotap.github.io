@@ -35,16 +35,14 @@ in the [HE-MU-other-user](HE-MU-other-user) field.
 | **`0x1000`** | Center 26-tone RU bit known |
 | **`0x2000`** | Center 26-tone RU value |
 | **`0x4000`** | SIG-B Compression known |
-| **`0x8000`** | SIG-B Symbols/MU-MIMO Users known |
+| **`0x8000`** | # of HE-SIG-B Symbols/MU-MIMO Users known |
 
 ## flags2
 
 | **`0x0007`** | Bandwidth from SIG-A |
 | **`0x0008`** | SIG-B compression from SIG-A |
 | **`0x00f0`** | # of HE-SIG-B Symbols - 1 or # of MU-MIMO Users - 1 from SIG-A |
-| **`0x0100`** | (reserved) |
-| **`0x0200`** | # of HE-SIG-B Symbols/MU-MIMO users known |
-| **`0x0c00`** | (reserved) |
+| **`0x0f00`** | (reserved) |
 | **`0x7000`** | # of HE-LTF Symbols from SIG-A |
 | **`0x8000`** | # of HE-LTF Symbols known |
 
