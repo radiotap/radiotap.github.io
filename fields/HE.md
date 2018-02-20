@@ -55,7 +55,7 @@ radiotap capture.
 
 ## data2
 
-| **`0x0001`** | (reserved) |
+| **`0x0001`** | pri/sec 80 MHz known |
 | **`0x0002`** | GI known |
 | **`0x0004`** | LTF symbols known |
 | **`0x0008`** | Pre-FEC Padding Factor known |
@@ -65,7 +65,7 @@ radiotap capture.
 | **`0x0080`** | midamble periodicity known |
 | **`0x3f00`** | RU allocation offset |
 | **`0x4000`** | RU allocation offset known |
-| **`0x8000`** | (reserved) |
+| **`0x8000`** | pri/sec 80 MHz (primary=0, secondary=1) |
 
 ## data3
 
