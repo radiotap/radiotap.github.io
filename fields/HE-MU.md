@@ -27,7 +27,7 @@ in the [HE-MU-other-user](HE-MU-other-user) field.
 | **`0x0010`** | SIG-B MCS known |
 | **`0x0020`** | SIG-B DCM (from SIG-A) |
 | **`0x0040`** | SIG-B DCM known |
-| **`0x0080`** | Bandwidth from SIG-A known |
+| **`0x0080`** | (reserved) |
 | **`0x0100`** | RU[0] known (presence depends on bandwidth) |
 | **`0x0200`** | RU[1] known (presence depends on bandwidth) |
 | **`0x0400`** | RU[2] known (presence depends on bandwidth) |
@@ -39,10 +39,13 @@ in the [HE-MU-other-user](HE-MU-other-user) field.
 
 ## flags2
 
-| **`0x0007`** | Bandwidth from SIG-A |
+| **`0x0003`** | bandwidth from Bandwidth field in HE-SIG-A (0 - 20 MHz, ..., 3 - 160/80+80 MHz) |
+| **`0x0004`** | bandwidth from Bandwidth field in HE-SIG-A known |
 | **`0x0008`** | SIG-B compression from SIG-A |
 | **`0x00f0`** | # of HE-SIG-B Symbols - 1 or # of MU-MIMO Users - 1 from SIG-A |
-| **`0x0f00`** | (reserved) |
+| **`0x0300`** | preamble puncturing from Bandwidth field in HE-SIG-A (0 - non-puncturing, 1 - punctured secondary 20 MHz (in primary 80 MHz if applicable), 2 - punctured but primary 40 MHz is present (in primary 80 MHz if applicable) |
+| **`0x0400`** | preamble puncturing from Bandwidth field in HE-SIG-A known |
+| **`0x0800`** | (reserved) |
 | **`0x7000`** | # of HE-LTF Symbols from SIG-A |
 | **`0x8000`** | # of HE-LTF Symbols known |
 
