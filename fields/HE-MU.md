@@ -45,9 +45,7 @@ in the [HE-MU-other-user](HE-MU-other-user) field.
 | **`0x00f0`** | # of HE-SIG-B Symbols - 1 or # of MU-MIMO Users - 1 from SIG-A |
 | **`0x0300`** | preamble puncturing from Bandwidth field in HE-SIG-A (0 - non-puncturing, 1 - punctured secondary 20 MHz (in primary 80 MHz if applicable), 2 - punctured but primary 40 MHz is present (in primary 80 MHz if applicable) |
 | **`0x0400`** | preamble puncturing from Bandwidth field in HE-SIG-A known |
-| **`0x0800`** | (reserved) |
-| **`0x7000`** | # of HE-LTF Symbols from SIG-A |
-| **`0x8000`** | # of HE-LTF Symbols known |
+| **`0xf800`** | (reserved) |
 
 ## RU
 
