@@ -85,5 +85,4 @@ If known=0, no data was reported (e.g. HW not capable, or CRC error on one of th
 
 ## RU
 
-Each of these contains the 8 bit RU assignment index, if indicated as
-present in the flags.
+See the discussion above regarding Channel 1/Channel 2 RU field usage.
