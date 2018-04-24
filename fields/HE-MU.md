@@ -48,7 +48,7 @@ If known=0, no data was reported (e.g. HW not capable, or CRC error on one of th
 
 ### Channel 2 tones depending on known field
 
-If known=0, no data was reported (e.g. HW not capable, or CRC error on one of the SIG-Bs).
+If **known=0**, no data was reported (e.g. HW not capable, or CRC error on one of the SIG-Bs).
 
 | **RU idx** | **known=1 (20 MHz)** | **known=2 (40 MHz)** | **known=3 (80 MHz)** | **known=4 (160 MHz)** |
 | **RU[0]** | / | 3:244 | -258:-17 | -770:529 |
@@ -64,8 +64,7 @@ If known=0, no data was reported (e.g. HW not capable, or CRC error on one of th
 | **`0x0020`** | SIG-B DCM (from SIG-A) |
 | **`0x0040`** | SIG-B DCM known |
 | **`0x0080`** | (Channel 2) Center 26-tone RU bit known |
-| **`0x0700`** | Channel 1 RU known |
-| **`0x0800`** | (reserved) |
+| **`0x0f00`** | Channel 1 RU known |
 | **`0x1000`** | (Channel 1) Center 26-tone RU bit known |
 | **`0x2000`** | (Channel 1) Center 26-tone RU value |
 | **`0x4000`** | SIG-B Compression known |
@@ -80,8 +79,7 @@ If known=0, no data was reported (e.g. HW not capable, or CRC error on one of th
 | **`0x0300`** | preamble puncturing from Bandwidth field in HE-SIG-A (0 - non-puncturing, 1 - punctured secondary 20 MHz (in primary 80 MHz if applicable), 2 - punctured but primary 40 MHz is present (in primary 80 MHz if applicable) |
 | **`0x0400`** | preamble puncturing from Bandwidth field in HE-SIG-A known |
 | **`0x0800`** | (Channel 2) Center 26-tone RU value |
-| **`0x7000`** | Channel 2 RU known |
-| **`0x8000`** | (reserved) |
+| **`0xf000`** | Channel 2 RU known |
 
 ## RU
 
