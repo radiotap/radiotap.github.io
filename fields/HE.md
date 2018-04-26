@@ -67,6 +67,218 @@ radiotap capture.
 | **`0x4000`** | RU allocation offset known |
 | **`0x8000`** | pri/sec 80 MHz (primary=0, secondary=1) |
 
+### RU allocation offset
+
+The RU allocation offset is encoded as the offset (within the 80 MHz
+pri/sec channel) in 26-tone "equivalents" according to the following table:
+
+<table>
+<tr>
+<th>offset</th>
+<th>26-tone</th>
+<th>52-tone</th>
+<th>106-tone</th>
+<th>242-tone</th>
+<th>484-tone</th>
+<th>996-tone</th>
+</tr>
+<tr>
+<td>0</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+<td rowspan="9">X</td>
+<td rowspan="18">X</td>
+<td rowspan="37">X</td>
+</tr>
+<tr>
+<td>1</td>
+<td>X</td>
+</tr>
+<tr>
+<td>2</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>3</td>
+<td>X</td>
+</tr>
+<tr>
+<td>4</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+</tr>
+<tr>
+<td>6</td>
+<td>X</td>
+</tr>
+<tr>
+<td>7</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>8</td>
+<td>X</td>
+</tr>
+<tr>
+<td>9</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+<td rowspan="9">X</td>
+</tr>
+<tr>
+<td>10</td>
+<td>X</td>
+</tr>
+<tr>
+<td>11</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>12</td>
+<td>X</td>
+</tr>
+<tr>
+<td>13</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+</tr>
+<tr>
+<td>15</td>
+<td>X</td>
+</tr>
+<tr>
+<td>16</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>17</td>
+<td>X</td>
+</tr>
+<tr>
+<td>18</td>
+<td>X</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>19</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+<td rowspan="9">X</td>
+<td rowspan="18">X</td>
+</tr>
+<tr>
+<td>20</td>
+<td>X</td>
+</tr>
+<tr>
+<td>21</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>22</td>
+<td>X</td>
+</tr>
+<tr>
+<td>23</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>24</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+</tr>
+<tr>
+<td>25</td>
+<td>X</td>
+</tr>
+<tr>
+<td>26</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>27</td>
+<td>X</td>
+</tr>
+<tr>
+<td>28</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+<td rowspan="9">X</td>
+</tr>
+<tr>
+<td>29</td>
+<td>X</td>
+</tr>
+<tr>
+<td>30</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>31</td>
+<td>X</td>
+</tr>
+<tr>
+<td>32</td>
+<td>X</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>33</td>
+<td>X</td>
+<td rowspan="2">X</td>
+<td rowspan="4">X</td>
+</tr>
+<tr>
+<td>34</td>
+<td>X</td>
+</tr>
+<tr>
+<td>35</td>
+<td>X</td>
+<td rowspan="2">X</td>
+</tr>
+<tr>
+<td>36</td>
+<td>X</td>
+</tr>
+</table>
+
+Note that while this table lists all possible *positions*, it doesn't list
+all possible *combinations*, i.e. with an HE-MU transmission the RU
+allocation may be mixed into different bandwidths for different users.
+
 ## data3
 
 | **`0x003f`** | BSS Color |
