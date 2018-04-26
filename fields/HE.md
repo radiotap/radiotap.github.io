@@ -70,113 +70,95 @@ radiotap capture.
 ### RU allocation offset
 
 The RU allocation offset is encoded as the offset (within the 80 MHz
-pri/sec channel) in 26-tone "equivalents" according to the following table:
+pri/sec channel) of the location in the correct tone column.
 
 <table>
 <tr>
-<th>offset</th>
 <th>26-tone</th>
 <th>52-tone</th>
 <th>106-tone</th>
 <th>242-tone</th>
 <th>484-tone</th>
 <th>996-tone</th>
+<th>2x996-tone</th>
 </tr>
 <tr>
 <td>0</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
-<td rowspan="9">X</td>
-<td rowspan="18">X</td>
-<td rowspan="37">X</td>
+<td rowspan="2">0</td>
+<td rowspan="4">0</td>
+<td rowspan="9">0</td>
+<td rowspan="18">0</td>
+<td rowspan="37">0</td>
+<td rowspan="37">0</td>
 </tr>
 <tr>
 <td>1</td>
-<td>X</td>
 </tr>
 <tr>
 <td>2</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">1</td>
 </tr>
 <tr>
 <td>3</td>
-<td>X</td>
 </tr>
 <tr>
 <td>4</td>
-<td>X</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>5</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
+<td rowspan="2">2</td>
+<td rowspan="4">1</td>
 </tr>
 <tr>
 <td>6</td>
-<td>X</td>
 </tr>
 <tr>
 <td>7</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">3</td>
 </tr>
 <tr>
 <td>8</td>
-<td>X</td>
 </tr>
 <tr>
 <td>9</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
-<td rowspan="9">X</td>
+<td rowspan="2">4</td>
+<td rowspan="4">2</td>
+<td rowspan="9">1</td>
 </tr>
 <tr>
 <td>10</td>
-<td>X</td>
 </tr>
 <tr>
 <td>11</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">5</td>
 </tr>
 <tr>
 <td>12</td>
-<td>X</td>
 </tr>
 <tr>
 <td>13</td>
-<td>X</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>14</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
+<td rowspan="2">6</td>
+<td rowspan="4">3</td>
 </tr>
 <tr>
 <td>15</td>
-<td>X</td>
 </tr>
 <tr>
 <td>16</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">7</td>
 </tr>
 <tr>
 <td>17</td>
-<td>X</td>
 </tr>
 <tr>
 <td>18</td>
-<td>X</td>
 <td></td>
 <td></td>
 <td></td>
@@ -184,94 +166,76 @@ pri/sec channel) in 26-tone "equivalents" according to the following table:
 </tr>
 <tr>
 <td>19</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
-<td rowspan="9">X</td>
-<td rowspan="18">X</td>
+<td rowspan="2">8</td>
+<td rowspan="4">4</td>
+<td rowspan="9">2</td>
+<td rowspan="18">1</td>
 </tr>
 <tr>
 <td>20</td>
-<td>X</td>
 </tr>
 <tr>
 <td>21</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">9</td>
 </tr>
 <tr>
 <td>22</td>
-<td>X</td>
 </tr>
 <tr>
 <td>23</td>
-<td>X</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>24</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
+<td rowspan="2">10</td>
+<td rowspan="4">5</td>
 </tr>
 <tr>
 <td>25</td>
-<td>X</td>
 </tr>
 <tr>
 <td>26</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">11</td>
 </tr>
 <tr>
 <td>27</td>
-<td>X</td>
 </tr>
 <tr>
 <td>28</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
-<td rowspan="9">X</td>
+<td rowspan="2">12</td>
+<td rowspan="4">6</td>
+<td rowspan="9">3</td>
 </tr>
 <tr>
 <td>29</td>
-<td>X</td>
 </tr>
 <tr>
 <td>30</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">13</td>
 </tr>
 <tr>
 <td>31</td>
-<td>X</td>
 </tr>
 <tr>
 <td>32</td>
-<td>X</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>33</td>
-<td>X</td>
-<td rowspan="2">X</td>
-<td rowspan="4">X</td>
+<td rowspan="2">14</td>
+<td rowspan="4">7</td>
 </tr>
 <tr>
 <td>34</td>
-<td>X</td>
 </tr>
 <tr>
 <td>35</td>
-<td>X</td>
-<td rowspan="2">X</td>
+<td rowspan="2">15</td>
 </tr>
 <tr>
 <td>36</td>
-<td>X</td>
 </tr>
 </table>
 
