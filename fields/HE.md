@@ -57,7 +57,7 @@ radiotap capture.
 
 | **`0x0001`** | pri/sec 80 MHz known |
 | **`0x0002`** | GI known |
-| **`0x0004`** | LTF symbols known |
+| **`0x0004`** | LTF symbol format known |
 | **`0x0008`** | Pre-FEC Padding Factor known |
 | **`0x0010`** | TxBF known |
 | **`0x0020`** | PE Disambiguity known |
@@ -276,7 +276,7 @@ allocation may be mixed into different bandwidths for different users.
 | **`0x000f`** | data Bandwidth/RU allocation (0=20, 1=40, 2=80, 3=160/80+80, 4=26-tone RU, 5=52-tone RU, 6=106-tone RU, 7=242-tone RU, 8=484-tone RU, 9=996-tone RU, 10=2x996-tone RU) |
 | **`0x0030`** | GI (0=0.8us, 1=1.6us, 2=3.2us, 3=reserved) |
 | **`0x00c0`** | (reserved)
-| **`0x0700`** | LTF symbols (0=1x, 1=2x, 2=4x, 3=6x, 4=8x, 5-7=reserved) |
+| **`0x0700`** | LTF symbol format (0=1x, 1=2x, 2=4x, 3-7=reserved) |
 | **`0x0800`** | (reserved) |
 | **`0x3000`** | Pre-FEC Padding Factor |
 | **`0x4000`** | TxBF |
