@@ -116,9 +116,6 @@ end of the radiotap data by referencing the header `it_len` field.
 -   Data is specified in little endian byte-order, all data fields
     including the `it_version`, `it_len` and `it_present` fields in the
     radiotap header are to be specified in little endian byte-order.
-    This wiki has adopted the Linux convention of using `__le64`,
-    `__le32` and `__le16` for 64-, 32- and 16-bit little
-    endian quantities.
 -   Field lengths are implicit: the radiotap header format does not
     specify field lengths, it is expected that the developer knows the
     corresponding length based on the data field name.
