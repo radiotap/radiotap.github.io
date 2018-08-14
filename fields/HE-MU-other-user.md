@@ -1,9 +1,9 @@
 ---
 title: HE-MU-other-user
-categories: [suggested]
+categories: [defined]
 ---
 Bit Number
-: 25 (tentatively assigned, field data may change)
+: 25
 
 Structure
   - u16 per_user_1, per_user_2
