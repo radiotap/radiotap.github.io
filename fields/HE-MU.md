@@ -34,7 +34,7 @@ and channel2" on the RU fields) are used in the following way:
    0 (for unknown) for 20 MHz
 
 The RU octets in the arrays ("RU_channel1" and "RU_channel2") represent
-the RU allocation index according to Table 28-24 ("RU allocation subfield").
+the RU allocation index according to Table 28-26 ("RU allocation subfield").
 
 The following tables map the RU fields to tone ranges:
 
