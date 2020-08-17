@@ -211,6 +211,6 @@ In this example, you would insert padding like this:
 
 One thing that can be confusing is the fact that there is some radiotap
 data that consists of multiple fields. For example the [Channel
-field](../defined-fields/Channel) consists of two 16-bit quantities and
+field](/fields/Channel) consists of two 16-bit quantities and
 both of them require 16-bit alignment, although the Channel data
 consists of 32 bits in total.
