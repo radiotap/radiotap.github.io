@@ -14,7 +14,6 @@ This table lists the fields some OSes assigned by bit number:
 
 | **bit number** | **field** |
 | 14 | [FCS in header](/fields/FCS in header) (clashes with official assignment) |
-| 15 | [TX flags](/fields/TX flags), [hardware queue](/fields/hardware queue) |
 | 16 | [RTS retries](/fields/RTS retries), [RSSI](/fields/RSSI) |
 | 17 | [data retries](/fields/data retries) |
 | 18 | [XChannel](/fields/XChannel) |
