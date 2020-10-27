@@ -8,7 +8,7 @@ using radiotap.
 The process:
 
 1.  Define the bit number, alignment, width, interpretation of the
-    fields on [the suggested fields page](../suggested-fields).
+    fields on [the suggested fields page](/fields/suggested).
 2.  Produce implementations wireshark and/or tcpdump and for one or
     more drivers.
 3.  Post the field definition and patches (the code) on the list.
