@@ -6,8 +6,8 @@ Type
 : 33
 
 Structure
-- u32 common
-- u32 value, mask
+: - u32 common
+  - u32 value, mask
 
 Required Alignment
 : 4

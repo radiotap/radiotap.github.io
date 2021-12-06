@@ -6,9 +6,9 @@ Type
 : 34
 
 Structure
-- u32 known
-- u32 data[6]
-- u32 user_info[] (Note this is variable length)
+: - u32 known
+  - u32 data[6]
+  - u32 user_info[] (Note this is variable length)
 
 Required Alignment
 : 4
