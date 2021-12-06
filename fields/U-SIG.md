@@ -29,12 +29,17 @@ field to the end of the value field.
 | **`0x00000004`** | UL/DL known |
 | **`0x00000008`** | BSS Color known |
 | **`0x00000010`** | TXOP known |
-| **`0x00000fe0`** | (reserved) |
+| **`0x00000020`** | bad U-SIG CRC |
+| **`0x00000fc0`** | (reserved) |
 | **`0x00007000`** | PHY version identifier |
 | **`0x00038000`** | BW |
 | **`0x00040000`** | UL/DL |
 | **`0x01f80000`** | BSS Color |
 | **`0xfe000000`** | TXOP |
+
+Note: If the "bad U-SIG CRC" bit is set, the [RX flags](/fields/RX flags)
+field should indicate PLCP CRC check failed as well, this bit just serves
+to differentiate where the CRC check failed.
 
 ## value / mask
 

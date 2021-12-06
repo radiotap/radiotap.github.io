@@ -7,8 +7,7 @@ Type
 
 Structure
 - u32 known
-- u32 data[5]
-- u32 reserved
+- u32 data[6]
 - u32 user_info[] (Note this is variable length)
 
 Required Alignment
@@ -48,7 +47,8 @@ be able to read it without having to go back to the prior trigger frame.)
 | **`0x00200000`** | (reserved) | User Encoding Block Tail Known | (reserved) |
 | **`0x00400000`** | RU/MRU Size Known | (same) | (reserved) |
 | **`0x00800000`** | RU/MRU Index Known | (same) | (reserved) |
-| **`0xff000000`** | (reserved) | (reserved) | (reserved) |
+| **`0x01000000`** | TB RU Allocation Known | (same) | (reserved) |
+| **`0xfe000000`** | (reserved) | (reserved) | (reserved) |
 
 Note: The "RU/MRU Size" and "RU/MRU Index" fields are provided for sniffers
 that cannot provide the entirety of the RU allocations and user information
@@ -80,11 +80,16 @@ Some values here could also appear for non-OFDMA PPDUs.
 ## data[1]
 
 | **bits** | **meaning** |
-| **`0x0000001f`** | RU/MRU Size (0: 26, 1: 52, 2: 106, 3: 242, 4: 484, 5: 996, 6: 2x996, 7: 4x996, 8: 52+26, 9: 106+26, 10: 484+242, 11: 996+484, 12: 996+484+242, 13: 2x996+484, 14: 3x996, 15: 3x996+484, 16: 996+484+242, 17+: reserved) |
+| **`0x0000001f`** | RU/MRU Size (0: 26, 1: 52, 2: 106, 3: 242, 4: 484, 5: 996, 6: 2x996, 7: 4x996, 8: 52+26, 9: 106+26, 10: 484+242, 11: 996+484, 12: 996+484+242, 13: 2x996+484, 14: 3x996, 15: 3x996+484) |
+| **`0x00000020`** | (reserved) |
 | **`0x00001fe0`** | RU/MRU Index (see IEEE 802.11be Draft 1.3 section 36.3.2 "Subcarrier and resource allocation") |
 | **`0x003fe000`** | RU Allocation-1::1 |
 | **`0x7fc00000`** | RU Allocation-1::2 |
 | **`0x80000000`** | (reserved) |
+
+Note: The RU/MRU Size and RU/MRU Index are calculated fields, ideally the
+sniffer should provide them for all OFDMA and punctured non-OFDMA PPDUs to
+simplify filtering and other data uses.
 
 ## data[2]
 
@@ -114,6 +119,21 @@ Some values here could also appear for non-OFDMA PPDUs.
 | **`0x00f00000`** | User Encoding Block CRC |
 | **`0x3f000000`** | User Encoding Block Tail |
 | **`0xc0000000`** | (reserved) |
+
+## data[5]
+
+| **bits** | **meaning** |
+| **`0x00000001`** | TB RU Allocation: PS 160 |
+| **`0x00000002`** | TB RU Allocation: PS 80 |
+| **`0x000001fc`** | TB RU Allocation: B7--B1 |
+| **`0xfffffe00`** | (reserved) |
+
+Note: the `0x1ff` bits here indicate the RU Allocation for the captured
+station (AID) in the trigger-based (TB) format, per Table 9-53a "Encoding of
+PS160 and RU Allocation subfields in an EHT variant User Info field". This
+may be given by the sniffer even for downlink OFDMA PPDUs if calculated from
+the RU Allocation from EHT-SIG for the given station. Note the bit split to
+ease cross-referencing Table 9-53a.
 
 ## `user_info` entry
 
