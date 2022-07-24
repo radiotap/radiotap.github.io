@@ -82,7 +82,6 @@ Some values here could also appear for non-OFDMA PPDUs.
 
 | **bits** | **meaning** |
 | **`0x0000001f`** | RU/MRU Size (0: 26, 1: 52, 2: 106, 3: 242, 4: 484, 5: 996, 6: 2x996, 7: 4x996, 8: 52+26, 9: 106+26, 10: 484+242, 11: 996+484, 12: 996+484+242, 13: 2x996+484, 14: 3x996, 15: 3x996+484) |
-| **`0x00000020`** | (reserved) |
 | **`0x00001fe0`** | RU/MRU Index (see IEEE 802.11be Draft 1.3 section 36.3.2 "Subcarrier and resource allocation") |
 | **`0x003fe000`** | RU Allocation 1 |
 | **`0x00400000`** | RU Allocation 1 known |
