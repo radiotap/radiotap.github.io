@@ -30,7 +30,9 @@ field to the end of the value field.
 | **`0x00000008`** | BSS Color known |
 | **`0x00000010`** | TXOP known |
 | **`0x00000020`** | bad U-SIG CRC |
-| **`0x00000fc0`** | (reserved) |
+| **`0x00000040`** | validate bits checked |
+| **`0x00000080`** | validate bits OK |
+| **`0x00000f00`** | (reserved) |
 | **`0x00007000`** | PHY version identifier |
 | **`0x00038000`** | BW |
 | **`0x00040000`** | UL/DL |
