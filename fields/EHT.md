@@ -27,9 +27,9 @@ be able to read it without having to go back to the prior trigger frame.)
 | **bits**         | **OFDMA (including TB)** | **MU-MIMO** | **EHT sounding** |
 | **`0x00000001`** | (reserved) | (reserved) | (reserved) |
 | **`0x00000002`** | Spatial Reuse Known | (same) | (same) |
-| **`0x00000004`** | Guard Interval Known | (same) | (same) |
-| **`0x00000008`** | LTF Known | (same) | (same) |
-| **`0x00000010`** | EHT-LTF Known | (same) | (same) |
+| **`0x00000004`** | GI( Guard Interval) Known | (same) | (same) |
+| **`0x00000008`** | (reserved) | (reserved) | (reserved) |
+| **`0x00000010`** | number of LTF symbols Known | (same) | (same) |
 | **`0x00000020`** | LDPC Extra Symbol Segment Known | (same) | (reserved) |
 | **`0x00000040`** | Pre-FEC Padding Factor Known | (same) | (reserved) |
 | **`0x00000080`** | PE Disambiguity Known | (same) | (reserved) |
@@ -66,9 +66,9 @@ Some values here could also appear for non-OFDMA PPDUs.
 | **bits**         | **meaning** |
 | **`0x00000007`** | (reserved) |
 | **`0x00000078`** | Spatial Reuse |
-| **`0x00000180`** | GI |
-| **`0x00000600`** | LTF |
-| **`0x00003800`** | EHT-LTF |
+| **`0x00000180`** | GI (0=0.8us, 1=1.6us, 2=3.2us, 3=reserved) |
+| **`0x00000600`** | LTF symbol size (0=unknown, 1=1x, 2=2x, 3=4x) |
+| **`0x00003800`** | number of LTF symbols (0=1x, 1=2x, 2=4x, 3=6x, 4=8x, 5-7=reserved) |
 | **`0x00004000`** | LDPC extra symbol segment |
 | **`0x00018000`** | Pre-FEC padding factor |
 | **`0x00020000`** | PE Disambiguity |
