@@ -27,7 +27,7 @@ be able to read it without having to go back to the prior trigger frame.)
 | **bits**         | **OFDMA (including TB)** | **MU-MIMO** | **EHT sounding** |
 | **`0x00000001`** | (reserved) | (reserved) | (reserved) |
 | **`0x00000002`** | Spatial Reuse Known | (same) | (same) |
-| **`0x00000004`** | GI( Guard Interval) Known | (same) | (same) |
+| **`0x00000004`** | GI (Guard Interval) Known | (same) | (same) |
 | **`0x00000008`** | (reserved) | (reserved) | (reserved) |
 | **`0x00000010`** | number of LTF symbols Known | (same) | (same) |
 | **`0x00000020`** | LDPC Extra Symbol Segment Known | (same) | (reserved) |
