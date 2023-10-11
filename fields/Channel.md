@@ -12,9 +12,9 @@ Required Alignment
 : 2
 
 Units
-: MHz, bitmap
+: KHz, bitmap
 
-Tx/Rx frequency in MHz, followed by flags.
+Tx/Rx frequency in KHz, followed by flags.
 
 Currently, the following flags are defined:
 
