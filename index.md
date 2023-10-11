@@ -15,8 +15,8 @@ Discussion
 
     to `majordomo -AT- radiotap.org`
 
--   Archive at gmane:
-    <http://news.gmane.org/gmane.network.wireless.radiotap>
+-   Archive at lore:
+    <http://lore.kernel.org/radiotap>
 -   [Discussion summaries on this wiki](../Discussion)
 -   After discussing, start the [standardisation
     process](../Standardisation).
