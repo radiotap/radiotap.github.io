@@ -6,7 +6,7 @@ Type
 : 32 
 
 Structure
-: u16 known, u16 data1, u16 data2,
+: u16 known, u16 data1, u16 data2
 
 Required Alignment
 : 2
