@@ -44,5 +44,4 @@ This field indicates the (known) contents of the S1G.
 
 | **`0x0007`** | Color: 0-7 |
 | **`0x0008`** | Uplink indication |
-| **`0x00F0`** | Reserved |
-| **`0xFF00`** | RSSI |
+| **`0xFFF0`** | Reserved |
