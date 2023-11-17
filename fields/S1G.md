@@ -27,8 +27,7 @@ This field indicates the (known) contents of the S1G.
 | **`0x0010`** | Bandwidth Known |
 | **`0x0020`** | MCS Known |
 | **`0x0040`** | Color Known |
-| **`0x0080`** | Uplink Indication Known |
-| **`0xFF00`** | Reserved |
+| **`0xFF80`** | Reserved |
 
 ## data1
 
@@ -43,5 +42,4 @@ This field indicates the (known) contents of the S1G.
 ## data2
 
 | **`0x0007`** | Color: 0-7 |
-| **`0x0008`** | Uplink indication |
-| **`0xFFF0`** | Reserved |
+| **`0xFFF8`** | Reserved |
