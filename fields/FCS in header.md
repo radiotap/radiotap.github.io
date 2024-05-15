@@ -1,7 +1,9 @@
 ---
 title: FCS in header
-categories: [rejected]
+categories: [rejected, unofficial]
 type: 14
+generate: OpenBSD
+parse: wireshark
 ---
 Bit Number
 : 14 (clashes with official assignment of bit 14)

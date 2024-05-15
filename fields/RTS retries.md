@@ -1,6 +1,7 @@
 ---
 title: RTS retries
-categories: [suggested]
+categories: [suggested, unofficial]
+generate: Linux (only libertas driver), NetBSD (?)
 type: 16
 ---
 Bit Number

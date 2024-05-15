@@ -1,6 +1,7 @@
 ---
 title: RSSI
-categories: [suggested]
+categories: [suggested, unofficial]
+generate: OpenBSD
 type: 16
 ---
 Bit Number

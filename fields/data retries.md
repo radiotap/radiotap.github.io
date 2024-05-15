@@ -1,6 +1,8 @@
 ---
 title: data retries
-categories: [suggested]
+categories: [suggested, unofficial]
+generate: Linux (mac80211)
+parse: wireshark
 type: 17
 ---
 Bit Number

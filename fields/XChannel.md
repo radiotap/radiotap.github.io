@@ -1,6 +1,8 @@
 ---
 title: XChannel
-categories: [suggested]
+categories: [suggested, unofficial]
+generate: FreeBSD, OS X
+parse: wireshark (partial)
 type: 18
 ---
 Bit Number
