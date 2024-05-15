@@ -1,6 +1,6 @@
 ---
 title: U-SIG
-categories: [suggested]
+categories: [defined]
 ---
 Type
 : 33
