@@ -20,8 +20,6 @@ The presence of this field indicates the frame was capture using an S1G phy.
 This field contains data to allow correct handling by programs like
 Wireshark etc.
 
-Is NDP indicates that this is an NDP frame, however, the content might not be known.
-
 ## known
 
 | **`0x0001`** | S1G PPDU Format known |
