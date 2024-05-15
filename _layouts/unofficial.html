@@ -1,0 +1,23 @@
+{% include head.html %}
+<p>{{ content }}
+<table><tbody>
+<tr>
+  <td><strong>bit number</strong></td>
+  <td><strong>field</strong></td>
+  <td><strong>generators/OS(es)</strong></td>
+  <td><strong>parser(s)</strong></td>
+</tr>
+{% assign fields = site.pages | sort:"type" %}
+{% for page in fields %}
+  {% if page.categories contains 'unofficial' %}
+    <tr>
+      <td>{{page.type}}</td>
+      <td><a href="{{ page.url }}">{{page.title}}</a></td>
+      <td>{{page.generate}}</td>
+      <td>{{page.parse}}</td>
+    </tr>
+  {% endif %}
+{% endfor %}
+</tbody></table>
+</p>
+{% include foot.html %}
