@@ -18,4 +18,4 @@ Number of RTS retries a transmitted frame used.
 Discussion
 ==========
 
-Used by Linux, NetBSD (?). Clashes with ../RSSI\_.
+Used by Linux, NetBSD (?). Clashes with [RSSI](RSSI).

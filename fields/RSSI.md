@@ -19,4 +19,4 @@ the hardware.
 Discussion
 ==========
 
-Used by OpenBSD only. Clashes with ../RTS retries\_.
+Used by OpenBSD only. Clashes with [RTS retries](RTS retries).
