@@ -1,6 +1,7 @@
 ---
 title: dB TX attenuation
 categories: [defined]
+type: 9
 ---
 Bit Number
 : 9

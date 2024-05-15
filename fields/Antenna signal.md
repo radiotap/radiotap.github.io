@@ -1,6 +1,7 @@
 ---
 title: Antenna signal
 categories: [defined]
+type: 5
 ---
 Bit Number
 : 5

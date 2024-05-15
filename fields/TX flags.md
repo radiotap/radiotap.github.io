@@ -1,6 +1,7 @@
 ---
 title: TX flags
 categories: [defined]
+type: 15
 ---
 Bit Number
 : 15

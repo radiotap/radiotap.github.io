@@ -1,6 +1,7 @@
 ---
 title: FHSS
 categories: [defined]
+type: 4
 ---
 Bit Number
 : 4

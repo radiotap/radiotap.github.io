@@ -1,6 +1,7 @@
 ---
 title: Channel
 categories: [defined]
+type: 3
 ---
 Bit Number
 : 3

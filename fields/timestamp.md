@@ -1,6 +1,7 @@
 ---
 title: timestamp
 categories: [defined]
+type: 22
 ---
 Bit Number
 : 22

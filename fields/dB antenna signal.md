@@ -1,6 +1,7 @@
 ---
 title: dB antenna signal
 categories: [defined]
+type: 12
 ---
 Bit Number
 : 12

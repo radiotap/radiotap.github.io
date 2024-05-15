@@ -1,6 +1,7 @@
 ---
 title: hardware queue
 categories: [suggested]
+type: 15
 ---
 Bit Number
 : 15

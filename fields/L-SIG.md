@@ -1,6 +1,7 @@
 ---
 title: L-SIG
 categories: [defined]
+type: 27
 ---
 Bit Number
 : 27

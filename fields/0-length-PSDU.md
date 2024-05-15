@@ -1,6 +1,7 @@
 ---
 title: 0-length-PSDU
 categories: [defined]
+type: 26
 ---
 Bit Number
 : 26

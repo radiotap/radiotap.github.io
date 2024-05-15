@@ -1,6 +1,7 @@
 ---
 title: dB antenna noise
 categories: [defined]
+type: 13
 ---
 Bit Number
 : 13

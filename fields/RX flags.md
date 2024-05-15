@@ -1,6 +1,7 @@
 ---
 title: RX flags
 categories: [defined]
+type: 14
 ---
 Bit Number
 : 14

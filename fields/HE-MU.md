@@ -1,6 +1,7 @@
 ---
 title: HE-MU
 categories: [defined]
+type: 24
 ---
 Bit Number
 : 24

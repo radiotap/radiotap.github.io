@@ -1,6 +1,7 @@
 ---
 title: Flags
 categories: [defined]
+type: 1
 ---
 Bit Number
 : 1

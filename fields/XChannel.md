@@ -1,6 +1,7 @@
 ---
 title: XChannel
 categories: [suggested]
+type: 18
 ---
 Bit Number
 : 18

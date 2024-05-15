@@ -1,6 +1,7 @@
 ---
 title: A-MPDU status
 categories: [defined]
+type: 20
 ---
 Bit Number
 : 20

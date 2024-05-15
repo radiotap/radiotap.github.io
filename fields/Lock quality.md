@@ -1,6 +1,7 @@
 ---
 title: Lock quality
 categories: [defined]
+type: 7
 ---
 Bit Number
 : 7

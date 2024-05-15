@@ -1,6 +1,7 @@
 ---
 title: RSSI
 categories: [suggested]
+type: 16
 ---
 Bit Number
 : 16

@@ -1,6 +1,7 @@
 ---
 title: extended flags
 categories: [suggested]
+type: 22
 ---
 Bit Number
 : 22 (not assigned yet)

@@ -1,6 +1,7 @@
 ---
 title: dBm TX power
 categories: [defined]
+type: 10
 ---
 Bit Number
 : 10

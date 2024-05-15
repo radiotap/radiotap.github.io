@@ -1,6 +1,7 @@
 ---
 title: VHT
 categories: [defined]
+type: 21
 ---
 Bit Number
 : 21

@@ -1,6 +1,7 @@
 ---
 title: TX attenuation
 categories: [defined]
+type: 8
 ---
 Bit Number
 : 8

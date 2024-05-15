@@ -1,6 +1,7 @@
 ---
 title: Vendor Namespace
 categories: [defined]
+type: 30
 ---
 Bit Number
 : not applicable, bit 30 in *every* `it_present` word

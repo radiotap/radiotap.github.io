@@ -1,6 +1,7 @@
 ---
 title: Rate
 categories: [defined]
+type: 2
 ---
 Bit Number
 : 2

@@ -1,6 +1,7 @@
 ---
 title: HE
 categories: [defined]
+type: 23
 ---
 Bit Number
 : 23

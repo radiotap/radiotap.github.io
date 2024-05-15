@@ -1,6 +1,7 @@
 ---
 title: data retries
 categories: [suggested]
+type: 17
 ---
 Bit Number
 : 17

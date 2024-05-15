@@ -1,6 +1,7 @@
 ---
 title: TSFT
 categories: [defined]
+type: 0
 ---
 Bit Number
 : 0

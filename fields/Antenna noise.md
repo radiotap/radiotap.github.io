@@ -1,6 +1,7 @@
 ---
 title: Antenna noise
 categories: [defined]
+type: 6
 ---
 Bit Number
 : 6

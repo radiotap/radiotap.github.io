@@ -1,6 +1,7 @@
 ---
 title: FCS in header
 categories: [rejected]
+type: 14
 ---
 Bit Number
 : 14 (clashes with official assignment of bit 14)

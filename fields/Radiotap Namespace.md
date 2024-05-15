@@ -1,6 +1,7 @@
 ---
 title: Radiotap Namespace
 categories: [defined]
+type: 29
 ---
 Bit Number
 : not applicable, bit 29 in *every* `it_present` word

@@ -1,13 +1,18 @@
 {% include head.html %}
 <p>
 These fields are currently under discussion:
-{% for page in site.pages %}
+<table><tbody>
+<tr><td><strong>bit number</strong></td><td><strong>field</strong></td></tr>
+{% assign fields = site.pages | sort:"type" %}
+{% for page in fields %}
   {% if page.categories contains 'suggested' %}
-    <ul>
-      <li><a href="{{ page.url }}">{{page.title}}</a></li>
-    </ul>
+    <tr>
+      <td>{{page.type}}</td>
+      <td><a href="{{ page.url }}">{{page.title}}</a></td>
+    </tr>
   {% endif %}
 {% endfor %}
+</tbody></table>
 {{ content }}
 </p>
 {% include foot.html %}

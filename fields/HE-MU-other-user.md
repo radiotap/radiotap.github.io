@@ -1,6 +1,7 @@
 ---
 title: HE-MU-other-user
 categories: [defined]
+type: 25
 ---
 Bit Number
 : 25

@@ -1,6 +1,7 @@
 ---
 title: MCS
 categories: [defined]
+type: 19
 ---
 Bit Number
 : 19

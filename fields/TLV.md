@@ -1,6 +1,7 @@
 ---
 title: TLV fields in radiotap
 categories: [defined]
+type: 28
 ---
 Bit Number:
 : 28

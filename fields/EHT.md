@@ -1,6 +1,7 @@
 ---
 title: EHT
 categories: [defined]
+type: 34
 ---
 Type
 : 34
