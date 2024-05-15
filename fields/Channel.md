@@ -21,6 +21,9 @@ Currently, the following flags are defined:
 
 
 | **Mask** | **Meaning** |
+| 0x0001 | S1G 700MHz spectrum channel |
+| 0x0002 | S1G 800MHz spectrum channel |
+| 0x0004 | S1G 900MHz spectrum channel |
 | 0x0010 | Turbo Channel |
 | 0x0020 | CCK channel |
 | 0x0040 | OFDM channel |
