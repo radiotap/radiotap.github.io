@@ -19,6 +19,6 @@ Discussion
 ==========
 
 This field originates from OpenBSD. It is parsed by wireshark, but
-clashes with defined-fields/RX flags\_.
+clashes with [RX flags](RX flags).
 
 This field should not be added since FCS-at-end is more natural.
