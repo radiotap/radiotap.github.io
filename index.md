@@ -28,7 +28,7 @@ The following Operating Systems support radiotap. A link is provided to
 their implementation support page.
 
 -   [FreeBSD](http://www.freebsd.org/cgi/man.cgi?query=ieee80211_radiotap)
--   [Linux](http://linuxwireless.org/en/developers/Documentation/radiotap)
+-   [Linux](https://wireless.wiki.kernel.org/en/developers/documentation/radiotap)
 -   [NetBSD](http://netbsd.gw.com/cgi-bin/man-cgi?ieee80211_radiotap+9+NetBSD-current)
 -   [OpenBSD](http://www.openbsd.org/cgi-bin/man.cgi?query=ieee80211_radiotap)
 -   Windows (with
