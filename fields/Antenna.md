@@ -1,7 +1,7 @@
 ---
 title: Antenna
 categories: [defined]
-type: 21
+type: 11
 ---
 Bit Number
 : 11
